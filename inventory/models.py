@@ -9,7 +9,7 @@ class Product(models.Model):
     )
     name = models.CharField(max_length=100)
     amount = models.PositiveIntegerField()
-    price_piece = models.FloatField(blank=True)
+    price_piece = models.FloatField(blank=True, null=True)
 
     def __str__(self):
         return self.name
